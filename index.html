@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>數位世界之窗</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ADD8E6, #003366); /* 淺藍至深藍的漸層 */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+            position: relative; /* 使子元素可相對定位 */
+        }
+
+        .decorative-shape {
+            position: absolute;
+            top: 20px; /* 位置微調 */
+            right: 10px; /* 位置微調 */
+            width: 80px; /* 調整圖形寬度 */
+            height: 80px; /* 調整圖形高度 */
+        }
+
+        .decorative-shape svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 30%;
+            padding: 20px;
+            background: linear-gradient(135deg, #FAD8D8, #C8A6A6); /* 肉色漸層 */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #FFE4D1; /* 較淺的肉色 */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            color: #333;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin: 10px 0; /* 分開每項的距離 */
+            border: 1px solid #ccc; /* 按鈕界線 */
+            border-radius: 5px; /* 圓角 */
+            overflow: hidden; /* 圓角效果 */
+        }
+
+        .sidebar a {
+            display: block; /* 填滿整個區域 */
+            color: #0066cc;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s; /* 过渡效果 */
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(0, 102, 204, 0.1); /* 鼠標懸停效果 */
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .category-content {
+            display: none; /* 隱藏所有分類內容 */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>數位世界之窗</h1>
+        <div class="decorative-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+                <circle cx="18" cy="18" r="16" fill="white" />
+                <path d="M12 24 L18 30 L24 24 Z" fill="#ADD8E6" />
+            </svg>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>分類</h2>
+            <ul>
+                <li><a onclick="showContent('government')">政府網站</a></li>
+                <li><a onclick="showContent('shopping')">網購網站</a></li>
+                <li><a onclick="showContent('education')">教育網站</a></li>
+                <li><a onclick="showContent('gaming')">遊戲網站</a></li>
+                <li><a onclick="showContent('news')">新聞網站</a></li>
+                <li><a onclick="showContent('travel')">旅遊網站</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>網站內容</h2>
+
+            <div id="government" class="category-content">
+                <h3>政府網站</h3>
+                <ul>
+                    <li><a href="https://www.gov.hk/" target="_blank">香港政府網站</a> - 提供各種政府服務及資訊。</li>
+                    <li><a href="https://www.hkg.gov.hk/" target="_blank">香港特別行政區政府</a> - 政策信息和新聞。</li>
+                </ul>
+            </div>
+
+            <div id="shopping" class="category-content">
+                <h3>網購網站</h3>
+                <ul>
+                    <li><a href="https://www.hktvmall.com/" target="_blank">HKTVmall</a> - 一站式網上購物平台，提供食品、家居及其他商品購買。</li>
+                    <li><a href="https://www.amazon.com/" target="_blank">Amazon</a> - 全球最大的網上零售商，擁有各類商品。</li>
+                    <li><a href="https://tw.lazada.com.tw/" target="_blank">Lazada</a> - 亞洲的領導網上購物平台，提供多種產品。</li>
+                    <li><a href="https://www.ebay.com/" target="_blank">eBay</a> - 供人們買賣各類物品的網上拍賣平台。</li>
+                </ul>
+            </div>
+
+            <div id="education" class="category-content">
+                <h3>教育網站</h3>
+                <ul>
+                    <li><a href="https://www.eduhk.hk/" target="_blank">香港教育大學</a> - 提供各類教育課程及資源。</li>
+                    <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> - 免費的在線教育平台，提供數學、科學等課程。</li>
+                    <li><a href="https://www.coursera.org/" target="_blank">Coursera</a> - 提供來自世界著名大學的在線課程。</li>
+                    <li><a href="https://www.udacity.com/" target="_blank">Udacity</a> - 提供關於技術和職業發展的在線課程。</li>
+                </ul>
+            </div>
+
+            <div id="gaming" class="category-content">
+                <h3>遊戲網站</h3>
+                <ul>
+                    <li><a href="https://www.roblox.com/" target="_blank">Roblox</a> - 創建和玩遊戲的平台，受到全球年輕玩家的歡迎。</li>
+                    <li><a href="https://www.epicgames.com/store/en-US/" target="_blank">Epic Games Store</a> - 提供各類PC遊戲，偶爾會有免費遊戲。</li>
+                    <li><a href="https://store.steampowered.com/" target="_blank">Steam</a> - 電子遊戲購買和下載平台，是遊戲愛好者的首選。</li>
+                    <li><a href="https://www.blizzard.com/" target="_blank">Blizzard Entertainment</a> - 知名遊戲開發商，擁有《魔獸世界》、《鬥陣特攻》等熱門遊戲。</li>
+                </ul>
+            </div>
+
+            <div id="news" class="category-content">
+                <h3>新聞網站</h3>
+                <ul>
+                    <li><a href="https://www.bbc.com/" target="_blank">BBC</a> - 英國的新聞頻道，提供全球最新消息。</li>
+                    <li><a href="https://www.cnn.com/" target="_blank">CNN</a> - 美國的新聞網站，報導政治、經濟及社會動態。</li>
+                    <li><a href="https://www.reuters.com/" target="_blank">Reuters</a> - 提供最新的商業、金融和政治新聞。</li>
+                    <li><a href="https://www.hongkongfp.com/" target="_blank">Hong Kong Free Press</a> - 香港的一家獨立新聞網站，提供本地及國際新聞。</li>
+                </ul>
+            </div>
+
+            <div id="travel" class="category-content">
+                <h3>旅遊網站</h3>
+                <ul>
+                    <li><a href="https://www.tripadvisor.com/" target="_blank">Tripadvisor</a> - 提供旅行者的評價和建議，包括酒店、餐廳和景點。</li>
+                    <li><a href="https://www.booking.com/" target="_blank">Booking.com</a> - 提供全球各地的酒店預訂服務。</li>
+                    <li><a href="https://www.kayak.com/" target="_blank">Kayak</a> - 比較航班、酒店和租車價格的旅遊網站。</li>
+                    <li><a href="https://www.expedia.com/" target="_blank">Expedia</a> - 提供航空公司、酒店和度假套餐的預訂服務。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(category) {
+            const contents = document.querySelectorAll('.category-content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+            const selectedContent = document.getElementById(category);
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
