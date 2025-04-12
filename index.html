@@ -68,14 +68,15 @@
         }
 
         .sidebar li {
-            margin: 10px 0; /* 分開每項的距離 */
+            margin: 15px 0; /* 分開每項的距離 */
             border: 1px solid #ccc; /* 按鈕界線 */
             border-radius: 5px; /* 圓角 */
             overflow: hidden; /* 圓角效果 */
         }
 
         .sidebar a {
-            display: block; /* 填滿整個區域 */
+            display: flex; /* 填滿整個區域 */
+            align-items: center; /* 垂直對齊 */
             color: #0066cc;
             text-decoration: none;
             padding: 10px;
@@ -84,6 +85,12 @@
 
         .sidebar a:hover {
             background-color: rgba(0, 102, 204, 0.1); /* 鼠標懸停效果 */
+        }
+
+        .icon {
+            width: 24px; /* 圖標寬度 */
+            height: 24px; /* 圖標高度 */
+            margin-right: 10px; /* 圖標與文本之間的距離 */
         }
 
         h2 {
@@ -127,58 +134,168 @@
             <div id="government" class="category-content">
                 <h3>政府網站</h3>
                 <ul>
-                    <li><a href="https://www.gov.hk/" target="_blank">香港政府網站</a> - 提供各種政府服務及資訊。</li>
-                    <li><a href="https://www.hkg.gov.hk/" target="_blank">香港特別行政區政府</a> - 政策信息和新聞。</li>
+                    <li>
+                        <a href="https://www.gov.hk/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Flag_of_Hong_Kong.svg/2560px-Flag_of_Hong_Kong.svg.png" alt="香港政府" class="icon" />
+                            香港政府網站 - 提供各種政府服務及資訊。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.hkg.gov.hk/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Flag_of_Hong_Kong.svg/2560px-Flag_of_Hong_Kong.svg.png" alt="香港特區政府" class="icon" />
+                            香港特別行政區政府 - 政策信息和新聞。
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div id="shopping" class="category-content">
                 <h3>網購網站</h3>
                 <ul>
-                    <li><a href="https://www.hktvmall.com/" target="_blank">HKTVmall</a> - 一站式網上購物平台，提供食品、家居及其他商品購買。</li>
-                    <li><a href="https://www.amazon.com/" target="_blank">Amazon</a> - 全球最大的網上零售商，擁有各類商品。</li>
-                    <li><a href="https://tw.lazada.com.tw/" target="_blank">Lazada</a> - 亞洲的領導網上購物平台，提供多種產品。</li>
-                    <li><a href="https://www.ebay.com/" target="_blank">eBay</a> - 供人們買賣各類物品的網上拍賣平台。</li>
+                    <li>
+                        <a href="https://www.hktvmall.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/HKTVmall_logo.svg" alt="HKTVmall" class="icon" />
+                            HKTVmall - 一站式網上購物平台，提供食品、家居及其他商品購買。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.amazon.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Amazon_logo.svg" alt="Amazon" class="icon" />
+                            Amazon - 全球最大的網上零售商，擁有各類商品。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tw.lazada.com.tw/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Lazada_Logo.png/200px-Lazada_Logo.png" alt="Lazada" class="icon" />
+                            Lazada - 亞洲的領導網上購物平台，提供多種產品。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.ebay.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/EBay_logo.svg" alt="eBay" class="icon" />
+                            eBay - 供人們買賣各類物品的網上拍賣平台。
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div id="education" class="category-content">
                 <h3>教育網站</h3>
                 <ul>
-                    <li><a href="https://www.eduhk.hk/" target="_blank">香港教育大學</a> - 提供各類教育課程及資源。</li>
-                    <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> - 免費的在線教育平台，提供數學、科學等課程。</li>
-                    <li><a href="https://www.coursera.org/" target="_blank">Coursera</a> - 提供來自世界著名大學的在線課程。</li>
-                    <li><a href="https://www.udacity.com/" target="_blank">Udacity</a> - 提供關於技術和職業發展的在線課程。</li>
+                    <li>
+                        <a href="https://www.eduhk.hk/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/EdUHK_trademark_logo.png" alt="香港教育大學" class="icon" />
+                            香港教育大學 - 提供各類教育課程及資源。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.khanacademy.org/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Khan_Academy_logo.png" alt="Khan Academy" class="icon" />
+                            Khan Academy - 免費的在線教育平台，提供數學、科學等課程。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.coursera.org/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Coursera_logo.svg/2560px-Coursera_logo.svg.png" alt="Coursera" class="icon" />
+                            Coursera - 提供來自世界著名大學的在線課程。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.udacity.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Udacity_logo.svg/1280px-Udacity_logo.svg.png" alt="Udacity" class="icon" />
+                            Udacity - 提供關於技術和職業發展的在線課程。
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div id="gaming" class="category-content">
                 <h3>遊戲網站</h3>
                 <ul>
-                    <li><a href="https://www.roblox.com/" target="_blank">Roblox</a> - 創建和玩遊戲的平台，受到全球年輕玩家的歡迎。</li>
-                    <li><a href="https://www.epicgames.com/store/en-US/" target="_blank">Epic Games Store</a> - 提供各類PC遊戲，偶爾會有免費遊戲。</li>
-                    <li><a href="https://store.steampowered.com/" target="_blank">Steam</a> - 電子遊戲購買和下載平台，是遊戲愛好者的首選。</li>
-                    <li><a href="https://www.blizzard.com/" target="_blank">Blizzard Entertainment</a> - 知名遊戲開發商，擁有《魔獸世界》、《鬥陣特攻》等熱門遊戲。</li>
+                    <li>
+                        <a href="https://www.roblox.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Roblox_logo.svg/2560px-Roblox_logo.svg.png" alt="Roblox" class="icon" />
+                            Roblox - 創建和玩遊戲的平台，受到全球年輕玩家的歡迎。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.epicgames.com/store/en-US/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Epic_Games_Logo.svg/2560px-Epic_Games_Logo.svg.png" alt="Epic Games" class="icon" />
+                            Epic Games Store - 提供各類PC遊戲，偶爾會有免費遊戲。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://store.steampowered.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Steam_logo.svg/2560px-Steam_logo.svg.png" alt="Steam" class="icon" />
+                            Steam - 電子遊戲購買和下載平台，是遊戲愛好者的首選。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.blizzard.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Blizzard_Entertainment_logo.svg/2560px-Blizzard_Entertainment_logo.svg.png" alt="Blizzard" class="icon" />
+                            Blizzard Entertainment - 知名遊戲開發商，擁有《魔獸世界》、《鬥陣特攻》等熱門遊戲。
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div id="news" class="category-content">
                 <h3>新聞網站</h3>
                 <ul>
-                    <li><a href="https://www.bbc.com/" target="_blank">BBC</a> - 英國的新聞頻道，提供全球最新消息。</li>
-                    <li><a href="https://www.cnn.com/" target="_blank">CNN</a> - 美國的新聞網站，報導政治、經濟及社會動態。</li>
-                    <li><a href="https://www.reuters.com/" target="_blank">Reuters</a> - 提供最新的商業、金融和政治新聞。</li>
-                    <li><a href="https://www.hongkongfp.com/" target="_blank">Hong Kong Free Press</a> - 香港的一家獨立新聞網站，提供本地及國際新聞。</li>
+                    <li>
+                        <a href="https://www.bbc.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/BBC_News.svg" alt="BBC" class="icon" />
+                            BBC - 英國的新聞頻道，提供全球最新消息。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnn.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/CNN.svg" alt="CNN" class="icon" />
+                            CNN - 美國的新聞網站，報導政治、經濟及社會動態。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.reuters.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Reuters_logo.svg/1024px-Reuters_logo.svg.png" alt="Reuters" class="icon" />
+                            Reuters - 提供最新的商業、金融和政治新聞。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.hongkongfp.com/" target="_blank">
+                            <img src="https://hongkongfp.com/wp-content/uploads/2017/09/cropped-HKFP-logo-2.png" alt="Hong Kong Free Press" class="icon" />
+                            Hong Kong Free Press - 香港的一家獨立新聞網站，提供本地及國際新聞。
+                        </a>
+                    </li>
                 </ul>
             </div>
 
             <div id="travel" class="category-content">
                 <h3>旅遊網站</h3>
                 <ul>
-                    <li><a href="https://www.tripadvisor.com/" target="_blank">Tripadvisor</a> - 提供旅行者的評價和建議，包括酒店、餐廳和景點。</li>
-                    <li><a href="https://www.booking.com/" target="_blank">Booking.com</a> - 提供全球各地的酒店預訂服務。</li>
-                    <li><a href="https://www.kayak.com/" target="_blank">Kayak</a> - 比較航班、酒店和租車價格的旅遊網站。</li>
-                    <li><a href="https://www.expedia.com/" target="_blank">Expedia</a> - 提供航空公司、酒店和度假套餐的預訂服務。</li>
+                    <li>
+                        <a href="https://www.tripadvisor.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Tripadvisor_logo.svg" alt="Tripadvisor" class="icon" />
+                            Tripadvisor - 提供旅行者的評價和建議，包括酒店、餐廳和景點。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.booking.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Booking.com_logo.svg/2560px-Booking.com_logo.svg.png" alt="Booking.com" class="icon" />
+                            Booking.com - 提供全球各地的酒店預訂服務。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.kayak.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Kayak_logo.svg/2560px-Kayak_logo.svg.png" alt="Kayak" class="icon" />
+                            Kayak - 比較航班、酒店和租車價格的旅遊網站。
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.expedia.com/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Expedia_Logo.svg/2560px-Expedia_Logo.svg.png" alt="Expedia" class="icon" />
+                            Expedia - 提供航空公司、酒店和度假套餐的預訂服務。
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
